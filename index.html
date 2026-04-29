@@ -942,24 +942,32 @@ createApp({
         { icon:'🌤️', temp:32, feel:37, desc:'晴朗' },
       ],
       itinerary: [
-        // DAY 1
-        [
+  {
+    day: 1,
+    date: '2026-06-16',
+    items: [
       { id: 101, time: '16:50', name: '抵達 BKK 機場', cat: '其他', note: '搭乘機場快線直達飯店', icon: 'fa-plane-arrival' },
       { id: 102, time: '18:30', name: 'Eastin Grand Hotel Phayathai', cat: '住宿', note: 'Check-in 後前往 22F 或 37F 無邊際泳池拍夜景', icon: 'fa-hotel' },
       { id: 103, time: '20:00', name: '朱拉隆功商圈 (Chulalongkorn)', cat: '美食', note: '搭車約 10 分鐘，吃在地人氣宵夜', icon: 'fa-utensils' },
       { id: 104, time: '22:00', name: 'Panda Spa', cat: '其他', note: '泰式按摩放鬆身心', icon: 'fa-spa' }
-    ],
-        // DAY 2
-        [
-         { id: 201, time: '09:30', name: '飯店自助早餐', cat: '美食', note: '享用 Eastin Grand 評價極高的早餐', icon: 'fa-bread-slice' },
+    ]
+  },
+  {
+    day: 2,
+    date: '2026-06-17',
+    items: [
+      { id: 201, time: '09:30', name: '飯店自助早餐', cat: '美食', note: '享用 Eastin Grand 評價極高的早餐', icon: 'fa-bread-slice' },
       { id: 202, time: '11:00', name: 'Factory Coffee', cat: '美食', note: '飯店步行即達，朝聖冠軍特調咖啡', icon: 'fa-mug-hot' },
       { id: 203, time: '12:30', name: '飯店午休', cat: '住宿', note: '回飯店躲太陽、游泳，享受五星級設施', icon: 'fa-umbrella-beach' },
       { id: 204, time: '15:00', name: '鄭王廟泰服體驗', cat: '景點', note: '已預約 Mahasane_thaicostume，拍攝後搭交通船過河', icon: 'fa-camera' },
       { id: 205, time: '17:00', name: 'Doggu Pet 客製項鍊', cat: '購物', note: '位於 ICONSIAM 旁邊，為寵物訂製專屬紀念品', icon: 'fa-dog' },
       { id: 206, time: '18:30', name: 'ICONSIAM 暹羅天地', cat: '購物', note: '室內水上市場、晚餐、欣賞水舞表演', icon: 'fa-bag-shopping' }
-    ],
-        // DAY 3
-        [
+    ]
+  },
+  {
+    day: 3,
+    date: '2026-06-18',
+    items: [
       { id: 301, time: '11:00', name: '移動至新飯店', cat: '住宿', note: '退房並至 Grande Centre Point Lumphini 寄放行李', icon: 'fa-suitcase' },
       { id: 302, time: '12:00', name: 'One Bangkok', cat: '景點', note: '2025 最新地標！飯店對面過馬路即達吃午餐', icon: 'fa-building' },
       { id: 303, time: '15:00', name: '飯店入住 Check-in', cat: '住宿', note: '正式入住並享受飯店公共設施', icon: 'fa-key' },
@@ -967,21 +975,30 @@ createApp({
       { id: 305, time: '19:30', name: 'Top Kart Bangkok 卡丁車', cat: '景點', note: '體驗極速狂飆，單程約 8 分鐘', icon: 'fa-car' },
       { id: 306, time: '20:00', name: 'CentralWorld 逛街', cat: '購物', note: 'Thong Smith 船麵、Karun 金箔泰奶', icon: 'fa-utensils' },
       { id: 307, time: '22:00', name: 'Big C 伴手禮採買', cat: '購物', note: '買完直接門口叫車回飯店放戰利品', icon: 'fa-cart-shopping' }
-    ],
-        // DAY 4
-        [
+    ]
+  },
+  {
+    day: 4,
+    date: '2026-06-19',
+    items: [
       { id: 401, time: '10:00', name: 'Fran\'s 早午餐', cat: '美食', note: '需提早預約的高人氣 Brancu', icon: 'fa-egg' },
       { id: 402, time: '12:00', name: '嵩越路 (Song Wat) 散策', cat: '景點', note: '文青咖啡廳、老建築與香氛店巡禮', icon: 'fa-leaf' },
       { id: 403, time: '14:30', name: '四面佛參拜', cat: '景點', note: '走 Skywalk 空橋，拍唐人街經典大照', icon: 'fa-om' },
       { id: 404, time: '15:30', name: 'Siam 商圈瘋逛', cat: '購物', note: 'Siam Center 網紅天橋、Miniso Land 粉紅旗艦店', icon: 'fa-shirt' },
       { id: 405, time: '17:30', name: '前往 Asiatique 碼頭', cat: '其他', note: '逛河濱夜市，18:30 前兌換船票', icon: 'fa-map-marker-alt' },
       { id: 406, time: '19:30', name: '昭披耶河公主號遊船晚餐', cat: '美食', note: '在河面上吹風看點燈的鄭王廟，享受浪漫晚餐', icon: 'fa-ship' }
-    ],
-        // DAY 5[
+    ]
+  },
+  {
+    day: 5,
+    date: '2026-06-20',
+    items: [
       { id: 501, time: '10:00', name: '恰圖恰週末市集', cat: '購物', note: '搭乘 MRT 藍線直達，最後衝刺採買', icon: 'fa-store' },
       { id: 502, time: '13:30', name: '出發前往機場', cat: '其他', note: '返回飯店領取行李後前往 BKK 機場', icon: 'fa-car-side' },
       { id: 503, time: '17:50', name: '搭乘星宇返台', cat: '其他', note: '預計 22:40 抵達台灣，完美旅程結束', icon: 'fa-plane-departure' }
-    ],
+    ]
+  }
+]
       ],
       shoppingList: [
         { id:1, name:'泰式香皂', price:'120', imgData:null },
