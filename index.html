@@ -578,9 +578,9 @@
             <div class="transit-line"></div>
             <div class="transit-info">
               <i :class="getTransitIcon(item.transit)"></i>
-              <span>{{item.transitTime || '約 15 分鐘'}}</span>
-            </div>
-          </div>
+<div v-if="nextItem && nextItem.category !== '航班'" class="transit-line">
+  <span>🚌 {{ item.transitTime || '約 15 分鐘' }}</span>
+</div>
           <div v-else-if="selectedDay>0" class="transit-row">
             <div class="transit-line"></div>
             <div class="transit-info">
