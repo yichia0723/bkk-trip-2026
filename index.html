@@ -270,8 +270,8 @@
   .cat-住宿 { background: rgba(168,185,210,0.25); color: #4a6fa5; }
   .icon-住宿 { background: rgba(168,185,210,0.2); color: #4a6fa5; }
   .cat-航班 { background: rgba(100,120,160,0.15); color: #3a5a8c; }
-  .cat-其他 { background: rgba(200,200,200,0.3); color: var(--text-soft); }
-  .icon-其他 { background: rgba(200,200,200,0.2); color: var(--text-soft); }
+  .cat-按摩 { background: rgba(200,200,200,0.3); color: var(--text-soft); }
+  .icon-按摩 { background: rgba(200,200,200,0.2); color: var(--text-soft); }
   /* FAB */
   .fab {
     position: fixed; bottom: 24px; right: 24px;
@@ -797,7 +797,7 @@
         <div class="form-group">
           <label class="form-label">分類</label>
           <select class="form-select" v-model="newExpense.category">
-            <option>餐飲</option><option>交通</option><option>景點</option><option>購物</option><option>住宿</option><option>其他</option>
+            <option>餐飲</option><option>交通</option><option>景點</option><option>購物</option><option>住宿</option><option>按摩</option>
           </select>
         </div>
         <button class="btn-primary" @click="addExpense">新增</button>
@@ -835,7 +835,7 @@
         <div class="form-group">
           <label class="form-label">分類</label>
           <select class="form-select" v-model="newItem.category">
-            <option>景點</option><option>美食</option><option>購物</option><option>住宿</option><option>其他</option>
+            <option>景點</option><option>美食</option><option>購物</option><option>住宿</option><option>按摩</option>
           </select>
         </div>
         <div class="form-group">
@@ -926,7 +926,7 @@ createApp({
       newItem: { name:'', category:'景點', time:'', note:'', hours:'', ticket:'', transit:'transit', transitTime:'', mapQuery:'' },
       newShop: { name:'', price:'', imgData:null },
       newExpense: { name:'', amount:'', category:'餐飲' },
-      categories: ['全部','景點','住宿','美食','購物','航班','其他'],
+      categories: ['全部','景點','住宿','美食','購物','航班','按摩'],
       days: [
         { dayName:'TUE', date:'16', label:'Day 1' },
         { dayName:'WED', date:'17', label:'Day 2' },
@@ -956,7 +956,8 @@ createApp({
           { id:7, category:'住宿', name:'飯店', time:'12:30', note:'享受五星設施 🌊', transit:'walk', transitTime:'步行 · 約 5 分鐘', mapQuery:'Eastin Grand Hotel Phayathai Bangkok' },
           { id:8, category:'景點', name:'Mahasane Thai Costume', time:'15:00', note:'鄭王廟泰服租借+拍攝1小時體驗', hours:'09:00-18:00', ticket:'฿5,250', transit:'car', transitTime:'約 25 分鐘', mapQuery:'Wat Arun Bangkok' },
           { id:9, category:'購物', name:'Doggu Pet', time:'17:00', note:'客製毛孩項鍊，ICONSIAM 旁邊 🐾', hours:'08:00-18:00', transit:'transit', transitTime:'搭交通船 · 約 10 分鐘', mapQuery:'ICONSIAM Bangkok'  },
-          { id:10, category:'購物', name:'ICONSIAM 暹羅天地', time:'18:00', note:'吃晚餐、逛室內水上市場\n🎁 1F服務台憑護照換遊客禮\n💦 室外水舞秀：18:30／20:00／21:00', hours:'10:00-22:00', transit:'walk', transitTime:'步行 · 約 3 分鐘', mapQuery:'ICONCRAFT ICONSIAM Bangkok' },
+          { id:10, category:'購物', name:'ICONSIAM 暹羅天地', time:'18:00', note:'吃晚餐、逛室內水上市場
+            \n 🎁 1F服務台憑護照換遊客禮\n 室外水舞秀：18:30／20:00／21:00', hours:'10:00-22:00', transit:'walk', transitTime:'步行 · 約 3 分鐘', mapQuery:'ICONCRAFT ICONSIAM Bangkok' },
           
         ],
         // DAY 3
@@ -967,7 +968,8 @@ createApp({
           { id: 14, category: '住宿', name: '飯店 Check-in', time: '15:00', note: '正式入住並享受飯店公共設施 🏊', hours: 'Check-in 14:00後', mapQuery: 'Grande Centre Point Lumphini Bangkok' },
           { id: 15, category: '景點', name: 'MahaNakhon SkyWalk', time: '17:30', note: '眺望 18:47 的夕陽與百萬夜景 🌅', hours: '10:00-19:00', transit: 'car', transitTime: '約 10 分鐘', mapQuery: 'King Power Mahanakhon' },
           { id: 16, category: '景點', name: 'TopKart Bangkok 卡丁車', time: '19:30', note: '體驗極速狂飆，單程約 8 分鐘 🏎️', hours: '10:00-22:00', transit: 'car', transitTime: '約 15 分鐘', mapQuery: 'Top Kart Bangkok' },
-          { id: 17, category: '購物', name: 'CentralWorld', time: '20:00', note: 'Thong Smith 船麵、Karun 金箔泰奶、逛街\n🎁 1F/2F服務台換優惠券\nJ卡累積消費滿1,000泰銖，在6F Customer Service出示【J卡】與Line【泰國伴手禮兌換券】兌換禮物', hours: '10:00-22:00', transit: 'car', transitTime: '約 20 分鐘', mapQuery: 'CentralWorld Bangkok' },
+          { id: 17, category: '購物', name: 'CentralWorld', time: '20:00', note: 'Thong Smith 船麵、Karun 金箔泰奶、逛街
+            \n 🎁 1F/2F服務台換優惠券\nJ卡累積消費滿1,000泰銖，在6F Customer Service出示【J卡】與Line【泰國伴手禮兌換券】兌換禮物', hours: '10:00-22:00', transit: 'car', transitTime: '約 20 分鐘', mapQuery: 'CentralWorld Bangkok' },
           { id: 18, category: '購物', name: 'Big C Supercenter Ratchadamri', time: '22:00', note: '零食與伴手禮採買 🛍️', hours: '09:00-00:00', transit: 'walk', transitTime: '步行 · 約 5 分鐘', mapQuery: 'Big C Rajdamri' },
         ],
         // DAY 4
@@ -981,10 +983,11 @@ createApp({
         ],
         // DAY 5
         [
-          { id: 25, category: '購物', name: '恰圖恰週末市集', time: '10:00', note: '搭乘 MRT 藍線直達 Kamphaeng Phet站 2號出口\n服飾主攻 Section 2-4、23-24', hours: '週五六日09:00-18:00', transit: 'transit', transitTime: '約 30 分鐘', mapQuery: 'Chatuchak Weekend Market' },
-          { id: 26, category: '住宿', name: 'Grande Centre Point Lumphini', time: '12:30', note: '返回飯店領取行李\n前往機場 Suvarnabhumi Airport ✈️', mapQuery: 'Grande Centre Point Lumphini Bangkok' },
+          { id: 25, category: '購物', name: '恰圖恰週末市集', time: '10:00', note: '搭乘 MRT 藍線直達 Kamphaeng Phet站 2號出口
+            \n 服飾主攻 Section 2-4、23-24', hours: '週五六日 09:00-18:00', transit: 'transit', transitTime: '約 30 分鐘', mapQuery: 'Chatuchak Weekend Market' },
+          { id: 26, category: '住宿', name: 'Grande Centre Point Lumphini', time: '12:30', note: '返回飯店領取行李
+            \n 前往機場 Suvarnabhumi Airport ✈️', mapQuery: 'Grande Centre Point Lumphini Bangkok' },
           { id: 27, category: '航班', name: '星宇航空 JX746', airline: 'STARLUX AIRLINES', flightNo: 'JX746', from: 'BKK', to: 'TPE', departure: '17:50', arrival: '22:40', date: '20 Jun 2026 (週六)', duration: '3h50m' },
-        ],
       ],
       shoppingList: [
         { id:1, name:'泰式香皂', price:'120', imgData:null },
